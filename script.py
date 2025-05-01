@@ -24,7 +24,7 @@ class StanceDataset(Dataset):
         self.data = pd.read_csv(file_path)
         self.tokenizer = tokenizer
         self.max_length = max_length
-        self.prompt_template = "The target '{s1}' is described as '{s2}'. This indicates a stance of: [MASK]"
+        self.prompt_template = "Regrading'{s1}' the opinion '{s2}' most likely expresses a  [MASK] stance"
         
         self.label_map = {"AGAINST": 1, "FAVOR": 2, "NEUTRAL": 0}
         
